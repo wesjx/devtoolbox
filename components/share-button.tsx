@@ -7,6 +7,7 @@ import { useLocale } from "@/lib/locale-context";
 import Link from "next/link";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
+import { Label } from "./ui/label";
 
 export default function ShareButton() {
     const [copied, setCopied] = useState(false);
