@@ -8,12 +8,13 @@ import Link from "next/link";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
 import { Label } from "./ui/label";
+import { useCurrentUrl } from "@/hooks/use-current-url";
 
 export default function ShareButton() {
     const [copied, setCopied] = useState(false);
     const { locale } = useLocale()
-    const currentUrl = typeof window !== "undefined" ? window.location.href : "";
-
+    const currentUrl = useCurrentUrl()
+    
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(currentUrl);
@@ -26,6 +27,8 @@ export default function ShareButton() {
 
     const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(currentUrl)}`;
+
+    console.log(currentUrl)
     return (
         <Dialog>
             <DialogTrigger >
