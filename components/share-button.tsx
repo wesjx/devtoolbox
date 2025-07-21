@@ -26,9 +26,6 @@ export default function ShareButton() {
 
     const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(currentUrl)}`;
-
-    console.log(linkedInUrl)
-    console.log(whatsappUrl)
     return (
         <Dialog>
             <DialogTrigger >
