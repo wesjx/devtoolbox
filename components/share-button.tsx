@@ -54,6 +54,9 @@ export default function ShareButton() {
                 </DialogHeader>
                 <div className="flex items-center gap-2">
                     <div className="w-full flex gap-2">
+                        <Label htmlFor="link" className="sr-only">
+                            Link
+                        </Label>
                         <Input
                             id="link"
                             readOnly
