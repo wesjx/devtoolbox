@@ -1,6 +1,7 @@
 "use client"
 import LanguageToggle from "@/components/language-toggle";
 import { PostSchema } from "@/components/posts";
+import ShareButton from "@/components/share-button";
 import { ModeToggle } from "@/components/theme-toggle";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -30,10 +31,15 @@ export default function PostView(post: PostSchema) {
             <LanguageToggle />
           </div>
 
-          <div className="shrink-0">
+          <div className="shrink-0 flex align-middle items-center gap-1.5">
             <Badge className={`${getCategoryColor(post.category).color} whitespace-nowrap`}>
               {getCategoryLabel(post.category, locale)}
             </Badge>
+
+            
+            <ShareButton>
+
+            </ShareButton>
           </div>
         </div>
 
